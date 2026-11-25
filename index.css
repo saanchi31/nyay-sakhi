@@ -1,0 +1,41 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom porcelain palette */
+.bg-pearl { background-color: #F8F4EE; }
+.text-plum { color: #3B2F4A; }
+.shadow-glass { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+/* Soft animation utilities */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+
+@keyframes pulseSoft {
+  0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.3); }
+  70% { box-shadow: 0 0 0 10px rgba(255,255,255,0);
+  }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+.pulse-soft {
+  animation: pulseSoft 2s infinite;
+}
+
+/* Hover lift effect */
+.hover-lift:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Card shadow for glass effect */
+.glass-card {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
